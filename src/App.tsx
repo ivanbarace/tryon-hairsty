@@ -12,19 +12,20 @@ function App() {
     <div className="app-container">
       <main>
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/tryon-hairsty/login" element={<Login />} />
+          <Route path="/tryon-hairsty/register" element={<Register />} />
+          <Route path="/tryon-hairsty/forgot-password" element={<ForgotPassword />} />
           <Route
-            path="/admin-dashboard/*"
+            path="/tryon-hairsty/admin-dashboard/*"
             element={
               <ProtectedRoute>
                 <AdminDashboard />
               </ProtectedRoute>
             }
           />
-          <Route path="/user/*" element={<User />} />
-          <Route path="/" element={<Navigate to="/user" replace />} />
+          <Route path="/tryon-hairsty/user/*" element={<User />} />
+          <Route path="/tryon-hairsty" element={<Navigate to="/tryon-hairsty/user" replace />} />
+          <Route path="/" element={<Navigate to="/tryon-hairsty/user" replace />} />
         </Routes>
       </main>
     </div>
