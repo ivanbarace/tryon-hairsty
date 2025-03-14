@@ -4,7 +4,6 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/tryon-hairsty/',
   plugins: [
     react(),
     VitePWA({
@@ -19,8 +18,8 @@ export default defineConfig({
         theme_color: '#ffffff',
         background_color: '#ffffff',
         display: 'standalone',
-        start_url: '/tryon-hairsty/',
-        scope: '/tryon-hairsty/',
+        start_url: '/',
+        scope: '/',
         icons: [
           {
             src: '/icon-192x192.png',
