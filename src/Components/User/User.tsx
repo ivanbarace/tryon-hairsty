@@ -30,7 +30,7 @@ const User: React.FC = () => {
       <Navigation />
       <div className="user-content">
         <Routes>
-          <Route path="/" element={<Navigate to="/user/home" replace />} />
+          <Route path="/" element={<Navigate to="/tryon-hairsty/user/home" replace />} />
           <Route path="/home" element={<Home />} />
           <Route path="/haircuts" element={<Hairstyle />} />
           <Route path="/profile" element={
