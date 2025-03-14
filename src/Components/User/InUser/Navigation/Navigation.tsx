@@ -52,19 +52,25 @@ const Navigation: React.FC = () => {
           <h2>HAIRSTYLE</h2>
         </div>
         <div className="navigation-inuser-links">
-          <Link to="/user/home" className={location.pathname === '/user/home' ? 'active' : ''}>
+          <Link
+            to="/tryon-hairsty/user/home"
+            className={location.pathname === '/tryon-hairsty/user/home' ? 'active' : ''}
+          >
             <span className="navigation-inuser-icon"><FaHome /></span>
             <span className="navigation-inuser-text">Home</span>
           </Link>
-          <Link to="/user/haircuts" className={location.pathname === '/user/haircuts' ? 'active' : ''}>
+          <Link
+            to="/tryon-hairsty/user/haircuts"
+            className={location.pathname === '/tryon-hairsty/user/haircuts' ? 'active' : ''}
+          >
             <span className="navigation-inuser-icon"><FaCut /></span>
             <span className="navigation-inuser-text">Hairstyles</span>
           </Link>
 
           {isLoggedIn ? (
             <Link
-              to="/user/profile"
-              className={`navigation-inuser-info ${location.pathname === '/user/profile' ? 'active' : ''}`}
+              to="/tryon-hairsty/user/profile"
+              className={`navigation-inuser-info ${location.pathname === '/tryon-hairsty/user/profile' ? 'active' : ''}`}
             >
               <div className="navigation-inuser-profile-container">
                 <span className="navigation-inuser-icon mobile-only"><FaUser /></span>
@@ -99,7 +105,7 @@ const Navigation: React.FC = () => {
             </Link>
           ) : (
             <div className="navigation-inuser-login">
-              <button onClick={() => navigate('/login')}>
+              <button onClick={() => navigate('/tryon-hairsty/login')}>
                 <FaSignInAlt />
                 <span>Login</span>
               </button>
@@ -114,8 +120,8 @@ const Navigation: React.FC = () => {
             <h3>Login Required</h3>
             <p>Please login or register to access your profile</p>
             <div className="navigation-inuser-modal-buttons">
-              <button onClick={() => navigate('/login')}>Login</button>
-              <button onClick={() => navigate('/register')}>Register</button>
+              <button onClick={() => navigate('/tryon-hairsty/login')}>Login</button>
+              <button onClick={() => navigate('/tryon-hairsty/register')}>Register</button>
             </div>
             <button className="navigation-inuser-modal-close" onClick={() => setShowModal(false)}>×</button>
           </div>
